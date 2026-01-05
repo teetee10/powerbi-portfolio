@@ -23,11 +23,16 @@ Retail teams lacked visibility into how inventory levels aligned with customer d
 - Dim_Date
 - Dim_Store
 
-Best practices applied:
+## Best practices applied:
 - Star schema design
 - Single-direction relationships
 - Hidden surrogate keys
 - Centralized measures table
+
+- A dedicated Measures table to centralize all business logic. This improves maintainability, enforces clean architecture, and   makes the semantic model easier to scale.”
+- “Single-direction relationships prevent ambiguity, improve performance, and keep filter propagation predictable. Dimension tables should filter Fact tables — never the other way around.”
+- “ABC measures are context-dependent. When evaluated at product grain level, the logic behaves correctly.”
+- Hid surrogate keys to enforce dimension-driven slicing and prevent accidental misuse in reports.”
 ---
 ## Key Analytics
 - Sales & demand trends (MoM / YoY)
